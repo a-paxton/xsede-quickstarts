@@ -60,3 +60,10 @@
           * In Web Shell: `cat >> ~/.ssh/authorized_keys` then Control+D
   1. Execute Dockerfile in remote terminal window: `./run-container`
       * **Note**: Re-run this step even if you're simply resuming a stopped/paused instance.
+  1. Move data from local computer to volume.
+      * In remote terminal window, create a new folder for your data.
+          * Move into your volume: `cd /vol_b/`
+              * **Note**: Volumes are named using consecutive letters (starting from `b`) fresh and on the fly after resuming from a stopped/paused state. Keep this in mind if you are attaching and then detaching multiple *different* volumes from your instance without pausing/stopping it each time.
+          * Create new directory for your data: `mkdir data`
+      * In local terminal window, copy entire data folder from laptop to server in local terminal window: `rsync -avP ~/local/path/to/data/folder/ your_instance_nickname:/vol_b/data/`
+          * **Note**: The trailing slashes are *vital* for moving entire folders.
