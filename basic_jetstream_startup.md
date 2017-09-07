@@ -30,3 +30,35 @@
       * Click "Create Volume".
   1. Wait for instance to be ready.
       * Jetstream will send an email notification to you when your instance is ready to use.
+  1. Attach volume to instance.
+      * Click name of new volume.
+      * Click "Attach".
+      * Select name of instance.
+      * Click "Attach".
+
+## Logging into Jetstream.
+  1. If paused/stopped, re-start the Jetstream environment.
+      * Log into Jetstream using your XSEDE user credentials.
+      * Select desired project under the "Projects" tab.
+      * Select the desired instance by clicking on its name.
+      * Click "Resume".
+      * Wait status to change to "Active".
+  1. If desired, add instance IP address to `~/.ssh/config` file on local computer.
+      * **Note**: The IP address may change if you have resumed the instance after having paused it. Be sure to update it in your `config` file as needed.
+      * Example addition to your `config` file:
+              ```
+              Host your_instance_nickname
+                Hostname 123.456.789.000
+                User your_xsede_username
+              ```
+          * For "Host", create a nickname for the instance. (*Tip*: Be informative.)
+          * For "Hostname", use your instance's IP address.
+          * For "User", use your XSEDE username.
+  1. From local terminal, securely connect to the instance: `ssh your_instance_nickname`
+      * If it requests a password, add key to VM:
+          * On local terminal: `cat ~/.ssh/id_rsa.pub | pbcopy`
+          * In Web Shell: `cat >> ~/.ssh/authorized_keys` then Control+D
+      * **Note**: We'll be referring to the window that you've `ssh`ed into your instance as your "remote terminal window" in these instructions.
+  1. Execute Dockerfile in remote terminal window: `./run-container`
+  1. In local browser, go to hostname IP.
+  1. Copy Jupyter Notebook token from remote terminal window into login.
