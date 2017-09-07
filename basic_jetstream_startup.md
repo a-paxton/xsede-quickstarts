@@ -67,3 +67,13 @@
           * Create new directory for your data: `mkdir data`
       * In local terminal window, copy entire data folder from laptop to server in local terminal window: `rsync -avP ~/local/path/to/data/folder/ your_instance_nickname:/vol_b/data/`
           * **Note**: The trailing slashes are *vital* for moving entire folders.
+
+## Running Jupyter and RStudio on Jetstream
+  1. Go to remote Jupyter in local browser.
+      * Go to hostname IP.
+      * Copy Jupyter Notebook token from remote terminal window into login on local browser.
+  1. Click "New" to start a new computational environment:
+      * Start a new Jupyter notebook by selecting the appropriate environment for your notebook (e.g., Python 2.7, R) from drop-down menu.
+      * Start an RStudio instance by selecting "RStudio" from drop-down menu.
+  1. Proceed as normal!
+      * **Note**: It's helpful to double-check your working directory to be sure you're storing/reading data using the *volume* rather than the *instance*. Again, this will likely be `vol_b` (see note on volume directories in previous section).
