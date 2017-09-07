@@ -46,9 +46,12 @@
   1. Add instance IP address to `~/.ssh/config` file on local computer.
       * **Note**: The IP address may change if you have resumed the instance after having paused it. Be sure to update it in your `config` file as needed.
       * Example addition to your `config` file:
-              > Host your_instance_nickname
-              >   Hostname 123.456.789.000
-              >   User your_xsede_username
+              
+               
+              Host your_instance_nickname
+                 Hostname 123.456.789.000
+                 User your_xsede_username
+              
           * For "Host", create a nickname for the instance. (*Tip*: Be informative.)
           * For "Hostname", use your instance's IP address.
           * For "User", use your XSEDE username.
