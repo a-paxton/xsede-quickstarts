@@ -1,4 +1,4 @@
-# Getting started on Jetstream
+# Getting started on Jetstream (for macOS)
 
 ## Initializing Jetstream
   1. Head to Jetstream: https://use.jetstream-cloud.org
