@@ -1,6 +1,6 @@
 # Getting started on Jetstream
 
-## Initializing the Jetstream environment.
+## Initializing Jetstream
   1. Head to Jetstream: https://use.jetstream-cloud.org
   1. Log into Jetstream using your XSEDE user credentials.
   1. From the "Projects" tab, create a new project by clicking the "Create new project" button.
@@ -36,14 +36,14 @@
       * Select name of instance.
       * Click "Attach".
 
-## Logging into Jetstream.
-  1. If paused/stopped, re-start the Jetstream environment.
+## Preparing Jetstream
+  1. If paused/stopped, re-start the Jetstream instance.
       * Log into Jetstream using your XSEDE user credentials.
       * Select desired project under the "Projects" tab.
       * Select the desired instance by clicking on its name.
       * Click "Resume".
       * Wait status to change to "Active".
-  1. If desired, add instance IP address to `~/.ssh/config` file on local computer.
+  1. Add instance IP address to `~/.ssh/config` file on local computer.
       * **Note**: The IP address may change if you have resumed the instance after having paused it. Be sure to update it in your `config` file as needed.
       * Example addition to your `config` file:
               ```
@@ -54,11 +54,9 @@
           * For "Host", create a nickname for the instance. (*Tip*: Be informative.)
           * For "Hostname", use your instance's IP address.
           * For "User", use your XSEDE username.
-  1. From local terminal, securely connect to the instance: `ssh your_instance_nickname`
+  1. From local terminal window, securely connect to the instance: `ssh your_instance_nickname`
       * If it requests a password, add key to VM:
           * On local terminal: `cat ~/.ssh/id_rsa.pub | pbcopy`
           * In Web Shell: `cat >> ~/.ssh/authorized_keys` then Control+D
-      * **Note**: We'll be referring to the window that you've `ssh`ed into your instance as your "remote terminal window" in these instructions.
   1. Execute Dockerfile in remote terminal window: `./run-container`
-  1. In local browser, go to hostname IP.
-  1. Copy Jupyter Notebook token from remote terminal window into login.
+      * **Note**: Re-run this step even if you're simply resuming a stopped/paused instance.
