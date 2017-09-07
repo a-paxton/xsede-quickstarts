@@ -6,4 +6,4 @@ Currently, the guide is written only for macOS users, but we'd welcome others to
 
 ## Contributing
 
-This guide is only as useful as its contributors! If you see something that's a bit unclear or out of date, feel free to submit a pull request to update the language.
+This guide is only as useful as its contributors! Feel free to submit a pull request at any time.
