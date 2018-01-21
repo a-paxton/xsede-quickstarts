@@ -7,3 +7,7 @@ Currently, the guide is written only for macOS users, but we'd welcome others to
 ## Contributing
 
 This guide is only as useful as its contributors! Feel free to submit a pull request at any time.
+
+## Acknowledgements
+
+Thanks to [Aaron Culich](https://github.com/aculich) for providing the walkthroughs that formed the basis for these quickstart guides.
