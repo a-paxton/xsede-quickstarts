@@ -1,6 +1,6 @@
-# A crash-course to getting started on Jetstream
+# A crash-course to getting started on XSEDE
 
-You've got your XSEDE allocation -- but what now? Here's a quickstart guide to starting a Jetstream instance, getting it ready to go, and spinning up your computational environment of choice.
+You've got your XSEDE allocation -- but what now? Here are a few quickstart guides to getting going on Jetstream and on PSC Bridges.
 
 Currently, the guide is written only for macOS users, but we'd welcome others to contribute similar guides for their own OS needs.
 
