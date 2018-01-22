@@ -40,6 +40,17 @@
         1. `srun` allows you to be interactive, but it spends compute resources the entire time it's running.
         1. `sbatch` is not interactive, but it stops the processes immediately upon finishing the scripts.
 
+## Interactively editing using Atom
+1. Download Atom: https://atom.io/.
+1. Install the `atom-commander` package: Packages > Settings View > Install Packages/Themes > search for "atom-commander" > install
+1. Toggle Atom Commander toolbar: Packages > Atom Commander > Toggle Focus
+1. Press "alt" (after clicking on the Atom Commander toolbar) to bring up options.
+1. Click "Servers", then "Add".
+1. Follow the SFTP setup directions from XSEDE: https://portal.xsede.org/psc-bridges#transfer:sftp
+1. After clicking the Atom Commander toolbar again, press "alt" to bring up options.
+1. Click "Open".
+1. Follow the prompts to log into your account.
+
 ## Additional resources
 * To see available software modules: https://portal.xsede.org/software#/
     * To load a resource, search for it by name, then click the desired software's name on the target resource.
