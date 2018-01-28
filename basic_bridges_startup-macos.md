@@ -68,6 +68,7 @@ Because Bridges users do not have root access, we need to install everything loc
     1. To install conda for yourself (only needs to be done once):
         1. Download source: `wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh`
         1. Install: `bash Anaconda3-5.0.1-Linux-x86_64.sh`
+        1. Change the default installation to be in (at least) the `.local` folder: `/home/username/.local/anaconda3`
         1. Follow the prompts as needed.
 
 ## Additional resources
