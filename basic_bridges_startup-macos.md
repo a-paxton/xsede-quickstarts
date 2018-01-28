@@ -51,6 +51,25 @@
 1. Click "Open".
 1. Follow the prompts to log into your account.
 
+## Python package installation
+Because Bridges users do not have root access, we need to install everything locally in order to get it to work.
+
+1. Package management with pip (thanks to https://gist.github.com/saurabhshri/46e4069164b87a708b39d947e4527298)
+    1. To install pip for yourself (only needs to be done once):
+        1. Download pip: `wget https://bootstrap.pypa.io/get-pip.py`
+        1. Install: `python get-pip.py --user`
+        1. Navigate to pip's new directory: `cd ~/.local/bin`
+        1. Update your `$PATH` variable: `PATH=$PATH:~/.local/bin`
+        1. Source new bash for changes to take effect: `source ~/.bashrc`
+    1. To install/update packages with pip:
+        1. For individual packages, run: `pip install package_name --user`
+        1. For requirements files, run: `pip install -r requirements.txt --user`
+1. Package management with conda
+    1. To install conda for yourself (only needs to be done once):
+        1. Download source: `wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh`
+        1. Install: `bash Anaconda3-5.0.1-Linux-x86_64.sh`
+        1. Follow the prompts as needed.
+
 ## Additional resources
 * To see available software modules: https://portal.xsede.org/software#/
     * To load a resource, search for it by name, then click the desired software's name on the target resource.
