@@ -59,6 +59,8 @@
       * If it requests a password, add key to VM:
           * On local terminal: `cat ~/.ssh/id_rsa.pub | pbcopy`
           * In Web Shell: `cat >> ~/.ssh/authorized_keys` then Control+D
+      * If you'd like to add another key (i.e., not your own computer's) to your VM:
+          * In remote terminal or Web Shell: `curl https://github.com/GITHUB_USERNAME.keys >> ~/.ssh/authorized_keys`
   1. Execute Dockerfile in remote terminal window: `./run-container`
       * **Note**: Re-run this step even if you're simply resuming a stopped/paused instance.
   1. Move data from local computer to volume.
