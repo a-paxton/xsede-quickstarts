@@ -1,6 +1,6 @@
 # A crash-course to getting started on XSEDE
 
-You've got your XSEDE allocation -- but what now? Here are a few quickstart guides to getting going on Jetstream and on PSC Bridges.
+You've got your XSEDE allocation -- but what now? Here are a few quickstart guides to getting going on Jetstream and on PSC Bridges. In addition to walkthroughs, it also includes some basic scripts that you can use as templates to help manage your instances.
 
 Currently, the guide is written only for macOS users, but we'd welcome others to contribute similar guides for their own OS needs.
 
