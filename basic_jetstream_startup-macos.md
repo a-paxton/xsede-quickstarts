@@ -10,14 +10,18 @@
   1. Select the desired project from the "Projects" tab.
   1. Create a new instance for the project.
       * Under the "Resources" tab for the project, click "New" and select "Instance" from the resulting drop-down menu.
-      * Search for `Ubuntu 14.04.3 Development GUI` and click to select.
+      * Search for the image you want for your instance.
+          * We recommend the Ubuntu Development GUI.
+          * As of April 2018, this is `Ubuntu 16.04 Devel and Docker v1.13`
       * If desired, rename the instance to something more informative.
       * Add bash setup script to the instance:
           * Click "Advanced Options".
           * Select "Create a new script".
-          * Into the "Script URL" box, paste `https://raw.githubusercontent.com/aculich/jetstream-setup/master/jetstream-setup.sh`
-              * This includes setup for terminal multiplexer, latest version of Docker, and other helpful information
+          * Into the "Script URL" box, the URL for your cloud-init script.
+              * We include a template cloud-init script in this repo: `https://raw.githubusercontent.com/a-paxton/xsede-quickstarts/master/xsede_templates/jetstream-setup.sh`
           * Give it a useful name.
+          * Decide whether to have it run only when the instance is created or each time that it starts up.
+              * Our template only needs to be run the first time you start up the instance.
           * Click "Save and add script".
           * Click "Continue to launch".
       * Check to make sure that the correct allocation source, provider, and instance size are specified.
@@ -52,6 +56,7 @@
                  Hostname 123.456.789.000
                  User your_xsede_username
 
+
           * For "Host", create a nickname for the instance. (*Tip*: Be informative.)
           * For "Hostname", use your instance's IP address.
           * For "User", use your XSEDE username.
@@ -61,7 +66,10 @@
           * In Web Shell: `cat >> ~/.ssh/authorized_keys` then Control+D
       * If you'd like to add another key (i.e., not your own computer's) to your VM:
           * In remote terminal or Web Shell: `curl https://github.com/GITHUB_USERNAME.keys >> ~/.ssh/authorized_keys`
-  1. Execute Dockerfile in remote terminal window: `./run-container`
+  1. Execute Dockerfile in remote terminal window.
+      * We include a template Dockerfile in this repo: `https://github.com/a-paxton/xsede-quickstarts/blob/master/xsede_templates/run-container`
+          * To use, you would need to copy this file into your volume.
+          * To run, type into your remote terminal window: `./run-container`
       * **Note**: Re-run this step even if you're simply resuming a stopped/paused instance.
   1. Move data from local computer to volume.
       * In remote terminal window, create a new folder for your data.
