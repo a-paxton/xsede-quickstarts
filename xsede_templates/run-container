@@ -1,0 +1,9 @@
+#!/bin/bash
+
+## provide an argument to start the container with a different wip
+## (work-in-progress) suffix other than "generic"
+
+PROJECT=${1:-generic}
+echo "(re)starting work-in-progress container for: ${PROJECT}"
+
+(cd container && docker build --tag wip-${PROJECT} . ) && docker rm -f wip-${PROJECT} ; docker run --name wip-${PROJECT} -p 80:8888 -v $(pwd):/home/jovyan/work -e GRANT_SUDO=yes  -d wip-${PROJECT} jupyter notebook --ip=0.0.0.0 ; sleep 3; docker exec wip-${PROJECT} jupyter notebook list
