@@ -7,7 +7,7 @@
     1. Note the path information: `username@br###`
         1. This will be your "head node" (a randomly assigned login node). This means it'll change each time you log in. This may cause problems with programs like GNU Screen or TMUX (similar to byobu).
         1. Keeping track of your assigned node will allow us to preserve all of our work if our connection is interrupted.
-        1. **Note***: Head nodes are not intended for long-term use. Any long-running processes on head nodes will be terminated by the system *automatically*.
+        1. ***Note***: Head nodes are not intended for long-term use. Any long-running processes on head nodes will be terminated by the system *automatically*.
 1. Start TMUX (which also runs GNU Screen): `tmux`
     1. If disconnected from your old node and assigned a different (new) node upon login, re-access your old node and TMUX session:
         1. From your new Terminal, log into that old node: `ssh br###`
