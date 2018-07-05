@@ -31,7 +31,7 @@
     1. Otherwise, fetch data from open website: `wget "http://your-url-here.com"`
     1. In Bridges, you have multiple work areas.
         1. `/home/username`: Head node location. Does not use resources. To access, may use global variable `$HOME` instead (e.g., `cd $HOME`).
-        1. `/pylon_number/group_name/username`: Project location. All data should be stored here. To access, may use global variable `$PROJECT` instead (e.g., `cd $PROJECT`). For more on group names, see https://portal.xsede.org/psc-bridges#account:multiple.
+        1. `/pylon_number/group_name/username`: Project location. All data should be stored here. To access, may use global variable `$SCRATCH` instead (e.g., `cd $SCRATCH`). For more on group names, see https://portal.xsede.org/psc-bridges#account:multiple.
 1. Start processing.
     1. Start process on compute node: `srun command`
         1. To get a pseudoterminal on a compute node instead run: `srun --pty command`
